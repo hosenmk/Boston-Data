@@ -11,3 +11,8 @@ df1=pd.DataFrame(Newrows,columns = ['crim', 'zn', 'indus', 'chas', 'nox', 'rm', 
 
 Newdf=pd.concat([df, df1],ignore_index=True)
 Newdf.to_csv('ModifiedBoston.csv', index=False)
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.mlab as mlab
+import seaborn as sns
