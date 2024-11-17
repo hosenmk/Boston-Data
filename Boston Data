@@ -25,3 +25,7 @@ import matplotlib.pyplot as plt
 plt.bar(df.crim,df.medv,color='blue')
 plt.xlabel('Crime Rate')
 plt.ylabel('Price of the House')
+plt.title('Crime rate vs Price of house')
+plt.show()
+
+
