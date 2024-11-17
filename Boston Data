@@ -28,4 +28,9 @@ plt.ylabel('Price of the House')
 plt.title('Crime rate vs Price of house')
 plt.show()
 
-
+plt.figure(figsize=(10, 6))
+plt.bar(df.indus,df.medv,color='indigo')
+plt.xlabel('Non-Retail business proportion')
+plt.ylabel('Price of the House')
+plt.title('Non-Retail business proportion vs Price of house')
+plt.show()
