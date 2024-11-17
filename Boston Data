@@ -35,12 +35,18 @@ plt.ylabel('Price of the House')
 plt.title('Non-Retail business proportion vs Price of house')
 plt.show()
 
-
 plt.figure(figsize=(10, 6))
 plt.bar(df.nox,df.medv,color='violet')
 plt.xlabel('Nitric Oxide concentration')
 plt.ylabel('Price of the House')
 plt.title('Nitric Oxide concentration vs Price of house')
+plt.show()
+
+plt.figure(figsize=(10, 6))
+plt.bar(df.rm,df.medv,color='green')
+plt.xlabel('Avg. No. of Rooms')
+plt.ylabel('Price of the House')
+plt.title('Avg. No. of Rooms vs Price of house')
 plt.show()
 
 
