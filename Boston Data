@@ -21,3 +21,7 @@ df = pd.read_csv("ModifiedBoston.csv)
 df.describe()
 
 plt.figure(figsize=(10, 6))
+import matplotlib.pyplot as plt
+plt.bar(df.crim,df.medv,color='blue')
+plt.xlabel('Crime Rate')
+plt.ylabel('Price of the House')
