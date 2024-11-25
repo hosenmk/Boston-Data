@@ -49,4 +49,11 @@ plt.ylabel('Price of the House')
 plt.title('Avg. No. of Rooms vs Price of house')
 plt.show()
 
+plt.figure(figsize=(10, 6))
+plt.bar(df.ptration,df.medv,color='grey')
+plt.xlabel('Pupil-Teacher ratio')
+plt.ylabel('Price of the House')
+plt.title('Pupil Teacher ration vs Price of house')
+plt.show()
+
 
