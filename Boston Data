@@ -76,3 +76,10 @@ plt.title('Distribution of Rooms (RM) in Boston Housing Data')
 plt.xlabel('Number of Rooms (RM)')
 plt.ylabel('Frequency')
 
+correlation_matrix = df.corr()
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+plt.title('Correlation Matrix of Boston Housing Data')
+plt.show()
+
+
