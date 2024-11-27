@@ -82,4 +82,10 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
 plt.title('Correlation Matrix of Boston Housing Data')
 plt.show()
 
-
+df = pd.read_csv('Boston.csv')
+def category_label(medv):
+  if medv > 20:
+    return 1
+  else:
+    return 0
+df['category'] = df['medv'].map(category_label)
