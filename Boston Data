@@ -69,3 +69,10 @@ plt.xlabel('Distance')
 plt.ylabel('Price of the House')
 plt.title('Distance vs Price of house')
 plt.show()
+
+plt.figure(figsize=(10, 6))
+sns.histplot(df['rm'], bins=30, kde=True)
+plt.title('Distribution of Rooms (RM) in Boston Housing Data')
+plt.xlabel('Number of Rooms (RM)')
+plt.ylabel('Frequency')
+
