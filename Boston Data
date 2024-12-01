@@ -93,9 +93,17 @@ df['category'] = df['medv'].map(category_label)
 df['category'] = df['medv'].map(category_lable)
 df.drop(columns=["medv"], inplace=True)
 df['category']=df['category'].map({0:'Low', 1:'High'})
+sns.pairplot(df, hue='category', plot_kws={'alpha': 0.5}, palette={'HIgh':'blue', 'Low': 'red'})
+plt.subtitle('Pair Plots (Boston Data Variables)', y=1.02)
+plt.show()
 
-
-
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlob.mlab as mlab
+import seaborn as sns
+import statsmodels.api as sm
+from sklearn.linear_model import LogisticRegression
 
 
 
