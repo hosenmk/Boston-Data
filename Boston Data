@@ -89,3 +89,14 @@ def category_label(medv):
   else:
     return 0
 df['category'] = df['medv'].map(category_label)
+
+df['category'] = df['medv'].map(category_lable)
+df.drop(columns=["medv"], inplace=True)
+df['category']=df['category'].map({0:'Low', 1:'High'})
+
+
+
+
+
+
+
