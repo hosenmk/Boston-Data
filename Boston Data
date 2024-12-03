@@ -105,6 +105,7 @@ import seaborn as sns
 import statsmodels.api as sm
 from sklearn.linear_model import LogisticRegression
 
-
+df = pd.read_csv('ModifiedBoston.csv')
+#Modified with five new rows as directed
 
 
