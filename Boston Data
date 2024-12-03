@@ -108,4 +108,12 @@ from sklearn.linear_model import LogisticRegression
 df = pd.read_csv('ModifiedBoston.csv')
 #Modified with five new rows as directed
 
+#Mapping Function
+def category_label(medv):
+  if medv > 20:
+    return 1
+  else:
+    return 0
+df['category'] = df['medv'].map(category_label)
+df.drop(columns=['medv'], inplace=True)
 
