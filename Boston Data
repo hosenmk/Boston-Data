@@ -117,3 +117,5 @@ def category_label(medv):
 df['category'] = df['medv'].map(category_label)
 df.drop(columns=['medv'], inplace=True)
 
+cols = ['crim', 'zn', 'indus', 'chas', 'nox', 'rm', 'age', 'dis', 'rad', 'tax', 'ptratio', 'b', 'lstat']
+
