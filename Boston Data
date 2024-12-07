@@ -119,3 +119,11 @@ df.drop(columns=['medv'], inplace=True)
 
 cols = ['crim', 'zn', 'indus', 'chas', 'nox', 'rm', 'age', 'dis', 'rad', 'tax', 'ptratio', 'b', 'lstat']
 x=sm.add_constant(df[cols])
+y = df['category']
+logitmodel=sm.Logit(y,x)
+result=logitmodel.fit()
+print(result.summary2())
+
+cols_significant = ['indus', 'chas', 'nox', 'rm', 'age', 'dis', 'rad', 'tax', 'ptratio', 'b', 'lstat']
+
+
