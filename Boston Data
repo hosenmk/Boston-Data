@@ -130,3 +130,17 @@ logitmeodel=sm.Logit(y,x)
 result=logitmodel.fit()
 print(result.summary2())
 
+#Now al the re3maining 11 variables along with intercept are found sgnificant considering a<0.05
+print(result.params)
+
+#Estimate of Probability of HIgh Price:
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
+from sklearn.metrics import confusion_matrix, accuracy_score, roc_curve, roc_auc_score
+from sklearn.preprocessing import StandardScaler
+
+x = df[cols_significant]
+y =df['category']
