@@ -125,5 +125,8 @@ result=logitmodel.fit()
 print(result.summary2())
 
 cols_significant = ['indus', 'chas', 'nox', 'rm', 'age', 'dis', 'rad', 'tax', 'ptratio', 'b', 'lstat']
-
+x=sm.add_constant(df[cols_significant])
+logitmeodel=sm.Logit(y,x)
+result=logitmodel.fit()
+print(result.summary2())
 
