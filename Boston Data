@@ -144,3 +144,13 @@ from sklearn.preprocessing import StandardScaler
 
 x = df[cols_significant]
 y =df['category']
+
+# Split the dataset into training (70%) and test (30%) sets with seed 101
+X_train, X_test, y_train, y_test, = train_test_split(x, y, test_size=0.3, random_state=101)
+
+scaler = StandardScaler()
+X_train = scaler.fit_transform(x_train)
+X_test = scaler.transform(X_test)
+
+# Logistic Regeression
+
