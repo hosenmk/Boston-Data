@@ -153,4 +153,8 @@ X_train = scaler.fit_transform(x_train)
 X_test = scaler.transform(X_test)
 
 # Logistic Regeression
+log_reg = LogisticRegression()
+log_reg.fit(X_train, y_train)
+log_reg_predictions = log_reg.predict(X_test)
+
 
