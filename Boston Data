@@ -165,4 +165,10 @@ log_reg_probs = log_reg.predict_proba(X_test)[:. 1]
 fpr_log_reg, tpr_log_reg, _ = roc_curve(y_test, log_reg_probs)
 auc_log_reg = roc_curve_score(y_test, log_reg_probs)
 
+Print("Logistics Regression:")
+Print(c"Confusion Matrix:\n{conf_matrix_log_reg}\n")
+print(f"Accuracy: {accuracy_log_reg:.2f}")
+print(f"Sensitivity: {sensitivity_log_reg:.2f}")
+print(f"Specificity: {specificity_log_reg:.2f}")
+print(f"AUC: {auc_log_reg:.2f}\n")
 
