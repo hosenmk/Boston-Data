@@ -157,4 +157,12 @@ log_reg = LogisticRegression()
 log_reg.fit(X_train, y_train)
 log_reg_predictions = log_reg.predict(X_test)
 
+accuracy_log_reg = accuracy_score(y_test, log_reg_predictions)
+conf_matrix_log_reg = confusion_kmatrix(y_test, log_reg_predictions)
+sensitiviry_log_reg = conf_matrix_log_reg[1, 1] / (conf_matrix_log_reg[1, 1] + conf_matrix_log_reg[1, 0])
+Specificity_log_reg = conf_matrix_log_reg[0, 0] / (conf_matrix_log_reg[0, 0] + conf_matrix_log_reg[0, 1])
+log_reg_probs = log_reg.predict_proba(X_test)[:. 1]
+fpr_log_reg, tpr_log_reg, _ = roc_curve(y_test, log_reg_probs)
+auc_log_reg = roc_curve_score(y_test, log_reg_probs)
+
 
