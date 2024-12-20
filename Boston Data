@@ -172,3 +172,4 @@ print(f"Sensitivity: {sensitivity_log_reg:.2f}")
 print(f"Specificity: {specificity_log_reg:.2f}")
 print(f"AUC: {auc_log_reg:.2f}\n")
 
+# Decision Trees
