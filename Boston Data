@@ -173,3 +173,18 @@ print(f"Specificity: {specificity_log_reg:.2f}")
 print(f"AUC: {auc_log_reg:.2f}\n")
 
 # Decision Trees
+decision_tree = DecisionTreeClassifier()
+decision_tree.fit(X_train, y_train)
+dt_predictions = decision_tree.predict(X_test)
+
+accuracy_dt = accuracy_score(y_test, dt_predictions)
+conf_matrix_dt = confusion_matrix(y_test, dt_predictions)
+
+sensitivity_dt = conf_matrix_dt[1, 1] / (conf_matrix_dt[1, 1] + conf_matrix_dt[1, 0])
+specificity_dt = conf_matrix_dt[0, 0] / (conf_matrix_dt[0, 0] + conf_matrix_dt[0, 1])
+
+dt_probs = decision_tree.predict_proba(X_test)[:, 1]
+fpr_dt, tpr_dt, _ = roc_curve(y_test, dt_probs)
+auc_dt = roc_auc_score(y_test, dt_probs)
+
+
