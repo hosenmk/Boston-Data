@@ -194,3 +194,4 @@ print(f"Sensitivity: {sensitivity_dt:.2f}")
 print(f"Specificity: {specificity_dt:.2f}")
 print(f"AUC: {auc_dt:.2f}\n")
 
+#Random Forest
