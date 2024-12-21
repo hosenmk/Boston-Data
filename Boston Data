@@ -187,4 +187,10 @@ dt_probs = decision_tree.predict_proba(X_test)[:, 1]
 fpr_dt, tpr_dt, _ = roc_curve(y_test, dt_probs)
 auc_dt = roc_auc_score(y_test, dt_probs)
 
+print("Decision Tree:")
+print(f"Confusion Matrix:\n{conf_matrix_dt}\n")
+print(f"Accuracy: {accuracy_dt:.2f}")
+print(f"Sensitivity: {sensitivity_dt:.2f}")
+print(f"Specificity: {specificity_dt:.2f}")
+print(f"AUC: {auc_dt:.2f}\n")
 
