@@ -200,3 +200,6 @@ random_forest.fit(X_train, y_train)
 rf_prediction = random_forest.predict(X_test)
 accuracy_rf = accuracy_score(y_test, rf_predictions)
 conf_matrix_rf = confusion_matrix(y_test, rf_predictions)
+
+sensitivity_rf = conf_matrix_rf[1, 1] / (conf_matrix_rf[1, 1] + conf_matrix_rf[1, 0])
+specificity_rf = 
