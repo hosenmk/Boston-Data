@@ -195,3 +195,8 @@ print(f"Specificity: {specificity_dt:.2f}")
 print(f"AUC: {auc_dt:.2f}\n")
 
 #Random Forest
+random_forest = RandomForestClassifier()
+random_forest.fit(X_train, y_train)
+rf_prediction = random_forest.predict(X_test)
+accuracy_rf = accuracy_score(y_test, rf_predictions)
+conf_matrix_rf = confusion_matrix(y_test, rf_predictions)
