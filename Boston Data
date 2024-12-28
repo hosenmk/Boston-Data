@@ -202,4 +202,9 @@ accuracy_rf = accuracy_score(y_test, rf_predictions)
 conf_matrix_rf = confusion_matrix(y_test, rf_predictions)
 
 sensitivity_rf = conf_matrix_rf[1, 1] / (conf_matrix_rf[1, 1] + conf_matrix_rf[1, 0])
-specificity_rf = 
+specificity_rf = conf_matrix_rf[0, 0] / (conf_matrix_rf[0, 0] + conf_matrix_rf[0, 1])
+rf_probs = random_forest.predict_proba(X_test)[:, 1]
+fpr_rf, tpr_rf, _ = roc_curve(y_test, rf_probs)
+auc_rf = roc_auc_score(y_test, rf_probs)
+
+print("Random Forest:")
