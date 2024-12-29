@@ -214,3 +214,5 @@ print(f"Sensitivity: {sensitivity_svm:.2f}")
 print(f"Specificity: {specificity_svm:.2f}")
 print(f"AUC: {auc_svm:.2f}\n")
 
+# Plot ROC curves for each model
+plt.figure(figsize=(8, 6))
