@@ -208,3 +208,9 @@ fpr_rf, tpr_rf, _ = roc_curve(y_test, rf_probs)
 auc_rf = roc_auc_score(y_test, rf_probs)
 
 print("Random Forest:")
+print(f"Confusion Matrix:\n{conf_matrix_svm}\n")
+print(f"Accuracy: {accuracy_svm:.2f}")
+print(f"Sensitivity: {sensitivity_svm:.2f}")
+print(f"Specificity: {specificity_svm:.2f}")
+print(f"AUC: {auc_svm:.2f}\n")
+
