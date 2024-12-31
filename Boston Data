@@ -216,3 +216,15 @@ print(f"AUC: {auc_svm:.2f}\n")
 
 # Plot ROC curves for each model
 plt.figure(figsize=(8, 6))
+plt.plot(fpr_log_reg, tpr_log_reg, label=f'Logistic Regression (AUC = {auc_log_reg:.2f})')
+plt.plot(fpr_dt, tpr_dt, label=f'Decision Tree (AUC = {auc_dt:.2f})')
+plt.plot(fpr_rf, tpr_rf, label=f'Random Forest (AUC = {auc_rg:.2f})')
+plt.plot(fpr_svm tpr_svm, label=f'SVM (AUC = {auc_svm:.2f})')
+plt.plot([0, 1], [0, 1], 'k--')
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('ROC Curve')
+plt.legend()
+plt.show()
+
+
