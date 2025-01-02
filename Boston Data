@@ -240,5 +240,8 @@ print(f"{'Model':<20} {'Accuracy':<15} {'Sensitivity':<15} {'Specificity':<15} {
 for i, model in enumerate(models):
   print(f"{model:<20} {accuracy_scores[i]:<15.2f} {sensitivity_socres[i]:<15.2f} {specificity_score[i]:<15.2f} {auc_scores[i]:<15.2f}")
 
-
+# For Accuraay, SVM is better
+# For Sensitivity, SVM is better
+# For Specificity, SVM is better
+# For AUC, SVM is better
 
