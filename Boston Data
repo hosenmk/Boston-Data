@@ -228,4 +228,17 @@ plt.legend()
 plt.show()
 
 # Lists Containing evaluation metrics for each model
+accuracy_scores = [accuracy_log_reg, accuracy_dt, accuracy_rf, accuracy_svm]
+sensitivity_scores = [sensitivity_log_reg, sensitivity_dt, sensitivity_rf, sensitivity_svm]
+specificity_scores = [specificity_log_reg, specificity_dt, specificity_rf, specificity_svm]
+auc_scores = [auc_log_reg, auc_dt, auc_rf, auc_svm]
+
+models = ['Logistics Regression', 'Decision Tree', 'Random forest', 'SVM']
+
+print("Comparative Evaluation of Models")
+print(f"{'Model':<20} {'Accuracy':<15} {'Sensitivity':<15} {'Specificity':<15} {'AUC':<15}")
+for i, model in enumerate(models):
+  print(f"{model:<20} {accuracy_scores[i]:<15.2f} {sensitivity_socres[i]:<15.2f} {specificity_score[i]:<15.2f} {auc_scores[i]:<15.2f}")
+
+
 
